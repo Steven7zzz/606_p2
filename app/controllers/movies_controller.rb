@@ -4,7 +4,7 @@ class MoviesController < ApplicationController
   # GET /movies or /movies.json
   def index
     column = params[:column] || "title"
-    direction = params[:direction] || "asc" 
+    direction = params[:direction] || "asc"
 
 
     # SELECT * FROM movies ORDER BY #{} #{};

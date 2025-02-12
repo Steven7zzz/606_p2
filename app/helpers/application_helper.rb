@@ -6,4 +6,3 @@ module ApplicationHelper
         "#{label} ".html_safe + link_to(text, { column: column, direction: order })
     end
 end
-  

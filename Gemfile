@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby '3.4.1'
+ruby "3.4.1"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.0.1"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
@@ -43,9 +43,9 @@ group :development, :test do
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 
-  gem 'sqlite3'
+  gem "sqlite3"
 end
-  
+
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
@@ -53,5 +53,5 @@ group :development do
 end
 
 group :production do
-  gem 'pg' # for Heroku deployment
+  gem "pg" # for Heroku deployment
 end
