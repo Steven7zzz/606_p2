@@ -18,13 +18,13 @@
   <tbody>
     <% @movies.each do |movie| %>
       <tr>
-        <td><%= movie.title %></td>
-        <td><%= movie.rating %></td>
-        <td><%= movie.release_date %></td>
+        <td class="<%= 'highlighted-column' if params[:column] == 'title' %>"><%= movie.title %></td>
+        <td class="<%= 'highlighted-column' if params[:column] == 'rating' %>"><%= movie.rating %></td>
+        <td class="<%= 'highlighted-column' if params[:column] == 'release_date' %>"><%= movie.release_date %></td>
         <td>
-          <%= link_to "Show", movie %> |
-          <%= link_to "Edit", edit_movie_path(movie) %> |
-          <%= link_to "Delete", movie, method: :delete %>
+          <%= link_to "Show", movie, class: "action-button" %> |
+          <%= link_to "Edit", edit_movie_path(movie), class: "action-button" %> |
+          <%= link_to "Delete", movie, method: :delete, class: "action-button" %>
         </td>
       </tr>
     <% end %>
@@ -36,4 +36,4 @@
   </tfoot>
 </table>
 
-<%= link_to "New movie", new_movie_path %>
+<%= link_to "New movie", new_movie_path, class: "new-movie-button" %>

@@ -6,6 +6,7 @@ class MoviesController < ApplicationController
     column = params[:column] || "title"
     direction = params[:direction] || "asc" 
 
+
     # SELECT * FROM movies ORDER BY #{} #{};
     @movies = Movie.order("#{column} #{direction}")
   end
